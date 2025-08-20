@@ -84,14 +84,22 @@ A.	Display the number of students in each department
 ```
 SELECT Stud_Dept, COUNT(*) AS Num_Students FROM student GROUP BY Stud_Dept;
 ```
+
+
 B.	Find the total marks obtained by students in each department
+
+
 ```
 SELECT Stud_Dept, SUM(Marks) AS Total_Marks FROM student
 ```
 ```
 JOIN marks ON student.Stud_Rollno = marks.Student_Rollno GROUP BY Stud_Dept;
 ```
+
+
 C.	List departments with more than 3 students. SELECT Stud_Dept, COUNT(*) AS Num_Students FROM student
+
+
 ```
 GROUP BY Stud_Dept HAVING COUNT(*) > 3;
 ```
@@ -99,19 +107,22 @@ D.	Find the average percentage of students in each department and sort it in des
 ```
 SELECT Stud_Dept, AVG(Percentage) AS Avg_Percentage FROM student
 ```
+
 ```
 JOIN marks ON student.Stud_Rollno = marks.Student_Rollno GROUP BY Stud_Dept
 ```
+
 ```
 ORDER BY Avg_Percentage DESC;
 ```
-```
+
 
 
 E.List all students who scored marks between 60 and 80.
 ```
 SELECT Student_Rollno FROM Marks
 ```
+
 ```
 WHERE Marks BETWEEN 60 AND 80;
 ```
@@ -121,6 +132,7 @@ WHERE Marks BETWEEN 60 AND 80;
 ```
 SELECT s.Stud_Name, m.Marks FROM student s
 ```
+
 ```
 JOIN marks m ON s.Stud_Rollno = m.Student_Rollno WHERE m.Marks BETWEEN 60 AND 80;
 ```
@@ -138,7 +150,7 @@ WHERE Stud_Dept IN ('Computer Science', 'Mechanical Engineering', 'Information T
 
 
 G.	Find students whose names end with 'n'.
-```
+
 SELECT Stud_Name FROM student
 ```
 ```
