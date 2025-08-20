@@ -150,7 +150,7 @@ WHERE Stud_Dept IN ('Computer Science', 'Mechanical Engineering', 'Information T
 
 
 G.	Find students whose names end with 'n'.
-
+```
 SELECT Stud_Name FROM student
 ```
 ```
