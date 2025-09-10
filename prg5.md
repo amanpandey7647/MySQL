@@ -56,7 +56,6 @@ SELECT UPPER(Stud_Name) as UPPERCASE FROM STUDENT;
 ```sql
 SELECT LOWER(Stud_Name) as LOWERCASE FROM STUDENT;
 ```
-<button onclick="copyToClipboard(this)">Copy</button>
 
 ### F. Show student names and their lengths.
 
